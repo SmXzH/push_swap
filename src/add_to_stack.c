@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 20:05:48 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 19:27:52 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:42:06 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,8 @@ void	add_to_stack(t_var *all, char **arr)
 		non_sort[i] = num;
 		sort[i] = num;
 		i++;
-		printf("%d\n", non_sort[i]);
-		printf("%d\n", sort[i]);
 	}
-	buble_sort(all, sort, non_sort, num);
+	buble_sort(all, sort, non_sort, len);
 }
 
 	//   Sortitg array 'sort' With Bubble sorting style
@@ -58,12 +56,12 @@ void	buble_sort(t_var *all, int *sort, int *non_sort, int len)
 	while (i < len)
 	{
 		j = 0;
-		while (j < (len - i - 1))
+		while (j < (len - 1 - i))
 		{
 			if (sort[j] > sort[j + 1])
 			{
-				tmp = sort[j];
-				sort[j] = sort[j + 1];
+				tmp = sort[j + 1];
+				sort[j + 1] = sort[j];
 				sort[j] = tmp;
 				count++;
 			}
@@ -71,6 +69,11 @@ void	buble_sort(t_var *all, int *sort, int *non_sort, int len)
 		}
 		i++;
 	}
+	for (int i = 0; sort[i]; i++)
+	{
+		printf("%d\n", sort[i]);
+	}
+	
 	create_stack(all, sort, non_sort, len);
 }
 
