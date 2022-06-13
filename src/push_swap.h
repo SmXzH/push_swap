@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/09 20:42:45 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 15:25:05 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 
 typedef struct s_list
 {
-	int				num;
 	int				flag;
 	int				index;
 	struct s_list	*next;

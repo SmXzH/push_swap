@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 20:05:48 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/12 20:33:53 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 15:18:53 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	add_to_stack(t_var *all, char **arr)
 }
 
 	//   Sortitg array 'sort' With Bubble sorting style
+	//  For cheking: We have already sorted array;
 
 int	buble_sort(t_var *all, int *sort, int *non_sort, int len)
 {
@@ -65,5 +66,28 @@ int	buble_sort(t_var *all, int *sort, int *non_sort, int len)
 		}
 		i++;
 	}
-	create_stack();
+	create_stack(all, sort, non_sort, len);
+}
+
+t_var	create_stack(t_var *all, int *sort, int *non_sort, int len)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < len)
+	{
+		j = 0;
+		while (j < len)
+		{
+			if (non_sort[j] == sort[i])
+			{
+				lstadd_back(&all->a_stack, lstnew(non_sort[i], j + 1));
+				j++;
+				break ;
+			}
+			j++;
+		}
+		i++;
+	}
 }
