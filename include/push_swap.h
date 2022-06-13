@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 15:25:05 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:17:03 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
+# include "../libft/libft.h"
 
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
 
-typedef struct s_list
+typedef struct s_lst
 {
+	int				num;
 	int				flag;
 	int				index;
-	struct s_list	*next;
-	struct s_list	*prev;
+	struct s_lst	*next;
+	struct s_lst	*prev;
 }	t_node;
 
 typedef struct var
@@ -41,5 +41,18 @@ typedef struct var
 	int		size_a;
 	int		size_b;
 }	t_var;
+
+void	add_to_stack(t_var *all, char **arr);
+void	buble_sort(t_var *all, int *sort, int *non_sort, int len);
+void	create_stack(t_var *all, int *sort, int *non_sort, int len);
+t_var	*init_struct(char **arr);
+t_node	*lstnew(int num, int index);
+void	lstadd_back(t_node **stack_a, t_node *new);
+void	error(void);
+void	free_arr(char **arr, int flag);
+void	check_arg(char **arr);
+char	**get_str(char **av);
+void	repeated_name(char **arr);
+t_var	*ft_parse(char **argv);
 
 #endif

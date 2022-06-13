@@ -6,13 +6,13 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:46:08 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 16:48:51 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:25:39 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_var	*init_struct(t_var **arr)
+t_var	*init_struct(char **arr)
 {
 	t_var	*all;
 	int		i;
@@ -21,7 +21,7 @@ t_var	*init_struct(t_var **arr)
 	while (arr[i])
 		i++;
 	all = malloc(sizeof(t_var));
-	if (all == NULL)
+	if (!all)
 		return (NULL);
 	all->a_stack = NULL;
 	all->b_stack = NULL;
@@ -39,6 +39,7 @@ t_node	*lstnew(int num, int index)
 	lst = malloc(sizeof(t_node));
 	if (!lst)
 		return (NULL);
+	lst->num = num;
 	lst->flag = 0;
 	lst->index = index;
 	lst->next = NULL;
@@ -71,5 +72,5 @@ void	lstadd_back(t_node **stack_a, t_node *new)
 		}
 	}
 	else
-		stack_a = new;
+		*stack_a = new;
 }

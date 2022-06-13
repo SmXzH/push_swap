@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:18 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 15:37:57 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/13 19:22:24 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ t_var	*ft_parse(char **argv)
 	repeated_name(str);
 	all = init_struct(str);
 	add_to_stack(all, str);
+	free_arr(str, 0);
+	return (all);
 }
 
 int	main(int ac, char **av)
