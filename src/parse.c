@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:28:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/09 20:22:45 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/14 15:11:52 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	error(void)
 {
-	write(1, "Error", 1);
+	write(1, "Error\n", 6);
 	exit (0);
 }
 
@@ -60,7 +60,7 @@ void	check_arg(char **arr)
 	}
 }
 
-//Geting from 2Darray str;
+//|| If we have ./push_swap "2" "4" "5" -> "2 4 5" and Than split 
 
 char	**get_str(char **av)
 {

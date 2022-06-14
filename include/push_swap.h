@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 19:17:03 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/14 22:11:09 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "../libft/libft.h"
+
 
 # define MAX_INT 2147483647
 # define MIN_INT -2147483648
@@ -55,4 +56,8 @@ char	**get_str(char **av);
 void	repeated_name(char **arr);
 t_var	*ft_parse(char **argv);
 
+// instruction
+void	sa(t_var *all, int flag);
+void	sb(t_var *all, int flag);
+void	ss(t_var *all);
 #endif

@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:46:08 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 19:30:23 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/14 16:36:21 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ t_node	*lstnew(int num, int index)
 	lst = malloc(sizeof(t_node));
 	if (!lst)
 		return (NULL);
-	lst->num = num;
 	lst->flag = 0;
 	lst->index = index;
 	lst->next = NULL;
