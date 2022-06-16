@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:54:57 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/16 18:30:32 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,11 @@ void	pa(t_var *all, int flag);
 void	pb(t_var *all, int flag);
 void	push_a(t_var *all);
 void	push_b(t_var *all);
+void	rra(t_var *all, int flag);
+void	rrb(t_var *all, int flag);
+void	rrr(t_var *all, int flag);
+void	rb(t_var *all, int flag);
+void	ra(t_var *all, int flag);
+void	rr(t_var *all, int flag);
 
 # endif
