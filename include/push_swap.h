@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/14 22:11:09 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:50:20 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,13 @@ void	repeated_name(char **arr);
 t_var	*ft_parse(char **argv);
 
 // instruction
+
 void	sa(t_var *all, int flag);
 void	sb(t_var *all, int flag);
 void	ss(t_var *all);
-#endif
+void	pa(t_var *all, int flag);
+void	pb(t_var *all, int flag);
+void	push_a(t_var *all);
+void	push_b(t_var *all);
+
+# endif
