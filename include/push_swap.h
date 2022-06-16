@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:50:20 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:54:57 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	add_to_stack(t_var *all, char **arr);
 void	buble_sort(t_var *all, int *sort, int *non_sort, int len);
 void	create_stack(t_var *all, int *sort, int *non_sort, int len);
 t_var	*init_struct(char **arr);
-t_node	*lstnew(int num, int index);
+t_node	*lstnew(int index);
 void	lstadd_back(t_node **stack_a, t_node *new);
 void	error(void);
 void	free_arr(char **arr, int flag);

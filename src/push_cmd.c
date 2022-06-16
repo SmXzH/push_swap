@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 22:09:17 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:50:42 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:56:51 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void	push_a(t_var *all)
 void	push_b(t_var *all)
 {
 	t_node	*tmp;
-
+	
+	tmp = all->a_stack->next;
 	all->a_stack->prev->next = all->b_stack->next;
 	all->a_stack->next->prev = all->b_stack->prev;
 	if (all->b_stack)

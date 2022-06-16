@@ -6,7 +6,7 @@
 /*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:46:08 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/14 16:36:21 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/16 13:54:18 by szhakypo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_var	*init_struct(char **arr)
 	return (all);
 }
 
-t_node	*lstnew(int num, int index)
+t_node	*lstnew(int index)
 {
 	t_node	*lst;
 
