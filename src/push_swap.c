@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:18 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/13 19:22:24 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:54:15 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,33 @@ t_var	*ft_parse(char **argv)
 	return (all);
 }
 
+void	sorting(t_var *all)
+{
+	// if (sort_true(all))
+	// 	free_stack(all);
+	// printf("%d\n", all->a_stack->index);
+	// printf("%d\n", all->a_stack->next->index);
+	// printf("%d\n", all->a_stack->prev->index);
+	//printf("-------------------\n");
+	sort_three_a(all);
+	// printf("%d\n", all->a_stack->index);
+	// printf("%d\n", all->a_stack->next->index);
+	// printf("%d\n", all->a_stack->prev->index);
+	// printf("-------------------\n");
+	// printf("%d\n", all->a_stack->num);
+	// printf("%d\n", all->a_stack->next->num);
+	// printf("%d\n", all->a_stack->prev->num);
+}
+
 int	main(int ac, char **av)
 {
 	t_var	*all;
-
+	
 	if (ac > 1)
 	{
 		all = ft_parse(av);
+		sorting(all);
+
 	}
 	return (0);
 }

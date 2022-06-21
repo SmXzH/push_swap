@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 17:46:08 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:54:18 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:37:28 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,14 @@ t_var	*init_struct(char **arr)
 	return (all);
 }
 
-t_node	*lstnew(int index)
+t_node	*lstnew(int num,int index)
 {
 	t_node	*lst;
 
 	lst = malloc(sizeof(t_node));
 	if (!lst)
 		return (NULL);
+	lst->num = num;
 	lst->flag = 0;
 	lst->index = index;
 	lst->next = NULL;
@@ -72,4 +73,26 @@ void	lstadd_back(t_node **stack_a, t_node *new)
 	}
 	else
 		*stack_a = new;
+}
+
+void	free_stack(t_var *all)
+{
+	t_node	*tmp;
+
+	while (all->size_a--)
+	{
+		tmp = all->a_stack->next;
+		free(all->a_stack);
+		all->a_stack = NULL;
+		all->a_stack = tmp;
+	}
+	while (all->size_b--)
+	{
+		tmp = all->b_stack->next;
+		free(all->b_stack);
+		all->b_stack = NULL;
+		all->b_stack = tmp;
+	}
+	free(all);
+	exit(0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_cmd.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 22:09:17 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:56:51 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/17 15:42:15 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	push_b(t_var *all)
 	t_node	*tmp;
 	
 	tmp = all->a_stack->next;
-	all->a_stack->prev->next = all->b_stack->next;
-	all->a_stack->next->prev = all->b_stack->prev;
+	all->a_stack->prev->next = all->a_stack->next;
+	all->a_stack->next->prev = all->a_stack->prev;
 	if (all->b_stack)
 	{
 		all->a_stack->prev = all->b_stack->prev;

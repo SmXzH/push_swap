@@ -3,18 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+         #
+#    By: sam <sam@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/13 17:23:12 by szhakypo          #+#    #+#              #
-#    Updated: 2022/06/16 18:26:09 by szhakypo         ###   ########.fr        #
+#    Updated: 2022/06/17 16:13:38 by sam              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 
-SRC		= src/add_to_stack.c	src/init_parse.c	src/parse.c		\
-		src/push_swap.c		src/swap_cmd.c		src/push_cmd.c	\	
-		src/reverse_cmd.c 	src/rotade_cmd.c					\
+SRC		= src/add_to_stack.c	src/init_parse.c	src/parse.c		src/push_swap.c		src/swap_cmd.c		src/push_cmd.c	src/reverse_cmd.c 	src/rotade_cmd.c src/sort_min.c					
 CC		= gcc
 
 OBJ		= $(SRC:%.c=%.o)

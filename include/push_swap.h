@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 13:14:34 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 18:30:32 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:38:19 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,17 @@ typedef struct var
 void	add_to_stack(t_var *all, char **arr);
 void	buble_sort(t_var *all, int *sort, int *non_sort, int len);
 void	create_stack(t_var *all, int *sort, int *non_sort, int len);
-t_var	*init_struct(char **arr);
-t_node	*lstnew(int index);
 void	lstadd_back(t_node **stack_a, t_node *new);
 void	error(void);
 void	free_arr(char **arr, int flag);
 void	check_arg(char **arr);
-char	**get_str(char **av);
 void	repeated_name(char **arr);
+void	free_stack(t_var *all);
+void	sort_three_a(t_var *all);
+char	**get_str(char **av);
+int 	sort_true(t_var *all);
+t_var	*init_struct(char **arr);
+t_node	*lstnew(int num, int index);
 t_var	*ft_parse(char **argv);
 
 // instruction

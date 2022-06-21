@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_to_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szhakypo <szhakypo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sam <sam@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 20:05:48 by szhakypo          #+#    #+#             */
-/*   Updated: 2022/06/16 13:54:33 by szhakypo         ###   ########.fr       */
+/*   Updated: 2022/06/17 16:36:55 by sam              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	create_stack(t_var *all, int *sort, int *non_sort, int len)
 		{
 			if (non_sort[j] == sort[i])
 			{
-				lstadd_back(&all->a_stack, lstnew(non_sort[i]));
+				lstadd_back(&all->a_stack, lstnew(non_sort[i], j + 1));
 				j++;
 				break ;
 			}
